@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Guitar Registry</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Special+Elite&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    
+    <style>
+        :root {
+            --seasalt: #f8fafc;
+            --keppel: #5da399;
+            --gunmetal: #263D42;
+            --flame: #cf5c36;
+            --burst-4: #f7c94d;
+            --burst-3: #f18a3b;
+            --burst-2: #d45331;
+            --burst-1: #9e2418;
+            --violet: #A31621;
+            --lemon: #f7c94d;
+            --persian-green: #1B998B;
+            --concrete: #475569;
+            --verdigris: #3AAFB9;
+            --darkgold: #AE8E1C;
+            --bronze: #8C6239;
+            --pico-primary-500: var(--flame);
+            --pico-primary-600: var(--keppel);
+            --pico-spacing: 2rem;
+            --tobacco-dark: #5f1116;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            background-image: url('./top-tile.png');
+            background-repeat: repeat-x;
+            background-position: top;
+            background-color: var(--seasalt);
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--gunmetal);
+        }
+        p {
+            font-size: .9rem;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #fff  0%, var(--seasalt) 100%);
+            color: white;
+            font-weight: 200;
+            padding: 2rem 0 0 0;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 17px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--gunmetal);
+            font-family: 'Special Elite', cursive;
+        }
+
+        .hero .tagline { 
+            font-size: 1.6rem;
+            color: var(--concrete);
+            margin-bottom: 1.5rem;
+            
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: var(--tobacco-dark);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero-illustration {
+            width: 800px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            /* box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.1); */
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 0 0 4rem 0;
+            background: var(--seasalt) url(./ledger.png) bottom right no-repeat;
+        }
+
+        .problem h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--concrete);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .problem-item {
+            /* background: white; */
+            padding: 2rem;
+            border-radius: 0.75rem;
+            /* box-shadow: 0 1px 30px 0 rgb(0 0 0 / 0.1); */
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .problem-item .icon {
+            font-size: 2.6rem;
+            color: var(--concrete);
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .problem-item .text-content {
+            flex: 1;
+        }
+
+        .problem-item h3 {
+            color: var(--concrete);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-align: left;
+            margin: 0;
+        }
+
+        .problem-item p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .problem-highlight {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7e7e88;
+            font-weight: 600;
+            padding: 2rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 30px 0 rgb(0 0 0 / 0.1);
+        }
+
+        /* Solution Section */
+        .solution {
+            background: url(./paf-back.png) no-repeat top left, linear-gradient(180deg, #f8fafc  0%, #fff 100%);
+            padding: 4rem 0;
+        }
+
+        .solution h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .solution-content {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .solution-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: #475569;
+        }
+
+        .solution-content strong {
+            color: var(--gunmetal);
+        }
+
+        .solution-content em {
+            color: var(--burst-2);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .feature:hover {
+            border-color: var(--flame);
+            box-shadow: 0 4px 12px 0 rgb(37 99 235 / 0.15);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: var(--tobacco-dark);
+        }
+
+        .feature h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gunmetal);
+        }
+
+        .feature p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Vision Section */
+        .vision {
+            padding: 4rem 0;
+            background: linear-gradient(180deg, var(--burst-1) 0%, var(--tobacco-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .vision h2 {
+            margin-bottom: 2rem;
+            color: var(--seasalt);
+            font-weight: 600;
+        }
+
+        .vision-content {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+            font-style: italic;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 4rem 0;
+            background-color: var(--seasalt);
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .cta > p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--gunmetal);
+        }
+
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-form input[type="email"] {
+            flex: 1;
+            min-width: 280px;
+            border: 2px solid var(--gunmetal);
+            border-radius: 0.5rem;
+        }
+
+        .email-form input[type="email"]:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+        }
+
+        .email-form button {
+            background: #1e293b;
+            border: 2px solid #1e293b;
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .email-form button:hover {
+            background: #334155;
+            border-color: #334155;
+            transform: translateY(-1px);
+        }
+
+        .cta-footnote {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        /* Container adjustments */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .problem-grid,
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .email-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .email-form input[type="email"] {
+                min-width: 100%;
+            }
+        }
+
+        /* Remove default margins on sections */
+        section {
+            margin: 0;
+        }
+
+        /* Clean up Pico defaults for better spacing */
+        main {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Electric Guitar Registry</h1>
+            <p class="tagline">The permanent home for guitar heritage and specs</p>
+            <p class="subtitle">Before the stories disappear forever, we're preserving the complete history of every legendary instrument</p>
+            <img src="list-screen.png" alt="Guitar Registry Screenshot" class="hero-illustration">
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Guitar History is Vanishing</h2>
+            <div class="problem-grid">
+                <article class="problem-item">
+                    <i class="ph ph-youtube-logo ph-fill icon"></i>
+                    <div class="text-content">
+                        <h3>YouTube Isn't Forever</h3>
+                        <p>Expert reviews and guitar stories disappear when channels close or videos get deleted. Decades of knowledge, gone.</p>
+                    </div>
+                </article>
+                <article class="problem-item">
+                    <i class="ph ph-magnifying-glass ph-fill icon"></i>
+                    <div class="text-content">
+                        <h3>Authentication Chaos</h3>
+                        <p>Collectors piece together fragments from brand websites, forums, and dealer knowledge. No single source of truth exists.</p>
+                    </div>
+                </article>
+                <article class="problem-item">
+                    <i class="ph ph-currency-dollar icon"></i>
+                    <div class="text-content">
+                        <h3>Value at Risk</h3>
+                        <p>Without proper documentation, even legendary instruments lose provenance and market value over time.</p>
+                    </div>
+                </article>
+            </div>
+            <!-- <div class="problem-highlight">
+                Every day we wait, more guitar heritage is lost forever.
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>One Registry. All Guitars. Forever.</h2>
+            <div class="solution-content">
+                <p><strong>The $8 billion vintage guitar market relies on scattered, unreliable documentation</strong> that leaves collectors, appraisers, and enthusiasts guessing about authenticity and provenance. When legendary instruments change hands for hundreds of thousands of dollars, everyone deserves better than forum posts and fading memories.</p>
+                
+                <p>The Guitar Registry solves this by creating the world's first permanent, cross-brand database where every guitar's complete story lives forever. Through cryptographically-signed attestations, experts, owners, and witnesses can permanently attach their knowledge to specific instruments, creating unalterable records that enhance value and preserve heritage.</p>
+                
+                <p><em>We're not just building a database—we're preserving cultural history while creating new economic value for everyone in the guitar ecosystem, from bedroom collectors to major auction houses.</em></p>
+            </div>
+            
+            <div class="features">
+                <article class="feature">
+                    <i class="ph ph-archive feature-icon"></i>
+                    <h3>Universal Catalog</h3>
+                    <p>Every brand, every model, every legendary individual instrument in one searchable database with complete specifications and history.</p>
+                </article>
+                
+                <article class="feature">
+                    <i class="ph ph-shield-check feature-icon"></i>
+                    <h3>Verified Provenance</h3>
+                    <p>Cryptographically-signed attestations from experts, owners, and witnesses create unalterable records that enhance authenticity and value.</p>
+                </article>
+                
+                <article class="feature">
+                    <i class="ph ph-globe feature-icon"></i>
+                    <h3>Permanent & Decentralized</h3>
+                    <p>Built on blockchain technology, ensuring records survive forever—no matter what happens to companies, websites, or platforms.</p>
+                </article>
+                
+                <article class="feature">
+                    <i class="ph ph-users feature-icon"></i>
+                    <h3>Community-Powered</h3>
+                    <p>Collectors, dealers, appraisers, and creators all contribute their expertise, making every guitar's story more complete over time.</p>
+                </article>
+                
+                <article class="feature">
+                    <i class="ph ph-trend-up feature-icon"></i>
+                    <h3>Market Intelligence</h3>
+                    <p>Historical pricing, ownership transfers, and market trends—all transparent and permanently documented.</p>
+                </article>
+                
+                <article class="feature">
+                    <i class="ph ph-book-open-text feature-icon"></i>
+                    <h3>Cultural Heritage</h3>
+                    <p>From bedroom recordings to stadium performances, every guitar's musical journey becomes part of its permanent legacy.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <h2>Preserving Culture, Creating Value</h2>
+            <div class="vision-content">
+                <p>Imagine finding the exact Stratocaster from that legendary 1969 recording, complete with verified performance history, original modifications, and expert attestations—all permanently documented and impossible to fake. We're not just building a database; we're preserving musical history while creating new economic value for everyone who loves guitars.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join the Registry Revolution</h2>
+            <p>Be among the first to help preserve guitar heritage. Share your expertise, contribute to the registry, or simply follow our progress.</p>
+            
+            <div class="email-form">
+                <input type="email" placeholder="Enter your email address" required id="email-input">
+                <button type="button" onclick="handleSubmit()">Get Early Access</button>
+            </div>
+            
+            <p class="cta-footnote">We're currently interviewing collectors, dealers, and experts to shape the registry. Tell us about your guitar story.</p>
+        </div>
+    </section>
+
+    <script>
+        function handleSubmit() {
+            const email = document.getElementById('email-input').value;
+            if (email) {
+                alert(`Thank you! We'll contact ${email} soon about early access to The Guitar Registry.`);
+                document.getElementById('email-input').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
