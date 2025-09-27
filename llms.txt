@@ -1,0 +1,74 @@
+# The Guitar Registry - Landing Page
+
+**Last updated:** December 19, 2024
+
+## Overview
+The Guitar Registry is a startup in the electric guitar industry targeting the collectible market. This landing page showcases the project to potential partners, stakeholders, and contributors.
+
+## Mission
+Preserving the complete history of every legendary guitar instrument before stories disappear forever.
+
+## The Problem
+Guitar history is vanishing due to:
+- **YouTube Isn't Forever**: Expert reviews and guitar stories disappear when channels close or videos get deleted. Decades of knowledge, gone.
+- **Authentication Chaos**: Collectors piece together fragments from brand websites, forums, and dealer knowledge. No single source of truth exists.
+- **Value at Risk**: Without proper documentation, even legendary instruments lose provenance and market value over time.
+
+## The Solution
+**One Registry. All Guitars. Forever.**
+
+The $8 billion vintage guitar market relies on scattered, unreliable documentation that leaves collectors, appraisers, and enthusiasts guessing about authenticity and provenance. When legendary instruments change hands for hundreds of thousands of dollars, everyone deserves better than forum posts and fading memories.
+
+The Guitar Registry solves this by creating the world's first permanent, cross-brand database where every guitar's complete story lives forever. Through cryptographically-signed attestations, experts, owners, and witnesses can permanently attach their knowledge to specific instruments, creating unalterable records that enhance value and preserve heritage.
+
+## Key Features
+
+### Universal Catalog
+Every brand, every model, every legendary individual instrument in one searchable database with complete specifications and history.
+
+### Verified Provenance
+Cryptographically-signed attestations from experts, owners, and witnesses create unalterable records that enhance authenticity and value.
+
+### Permanent & Decentralized
+Built on blockchain technology, ensuring records survive forever—no matter what happens to companies, websites, or platforms.
+
+### Community-Powered
+Collectors, dealers, appraisers, and creators all contribute their expertise, making every guitar's story more complete over time.
+
+### Market Intelligence
+Historical pricing, ownership transfers, and market trends—all transparent and permanently documented.
+
+### Cultural Heritage
+From bedroom recordings to stadium performances, every guitar's musical journey becomes part of its permanent legacy.
+
+## Vision
+Preserving Culture, Creating Value
+
+Imagine finding the exact Stratocaster from that legendary 1969 recording, complete with verified performance history, original modifications, and expert attestations—all permanently documented and impossible to fake. We're not just building a database; we're preserving musical history while creating new economic value for everyone who loves guitars.
+
+## Call to Action
+Join the Registry Revolution. Be among the first to help preserve guitar heritage. Share your expertise, contribute to the registry, or simply follow our progress.
+
+The team is currently interviewing collectors, dealers, and experts to shape the registry.
+
+## Target Audience
+- Guitar collectors (bedroom collectors to major auction houses)
+- Dealers and appraisers
+- Guitar enthusiasts and experts
+- Potential partners and stakeholders
+- Contributors to the guitar ecosystem
+
+## Technology Stack
+- Blockchain technology for permanent, decentralized records
+- Cryptographically-signed attestations
+- Cross-brand database architecture
+
+## Market Context
+The vintage guitar market is valued at $8 billion and currently relies on fragmented, unreliable documentation systems.
+
+## Design Elements
+- Elegant but modern design
+- Vintage burst color palette on white background
+- Typewriter-style main title using "Special Elite" font
+- Clean, professional typography using Inter font
+- Background images including guitar-related graphics and ledger imagery
