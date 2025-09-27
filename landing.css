@@ -298,7 +298,7 @@ p {
     box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
 }
 
-.email-form button {
+.email-form .button {
     background: #1e293b;
     border: 2px solid #1e293b;
     color: white;
@@ -308,7 +308,7 @@ p {
     transition: all 0.2s ease;
 }
 
-.email-form button:hover {
+.email-form .button:hover {
     background: #334155;
     border-color: #334155;
     transform: translateY(-1px);

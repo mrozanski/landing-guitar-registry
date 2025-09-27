@@ -126,22 +126,12 @@
             <p>Be among the first to help preserve guitar heritage. Share your expertise, contribute to the registry, or simply follow our progress.</p>
             
             <div class="email-form">
-                <input type="email" placeholder="Enter your email address" required id="email-input">
-                <button type="button" onclick="handleSubmit()">Get Early Access</button>
+                <a href="https://guitarhistorian.com/discovery/" class="button">Count me in!</a>
             </div>
             
             <p class="cta-footnote">We're currently interviewing collectors, dealers, and experts to shape the registry. Tell us about your guitar story.</p>
         </div>
     </section>
 
-    <script>
-        function handleSubmit() {
-            const email = document.getElementById('email-input').value;
-            if (email) {
-                alert(`Thank you! We'll contact ${email} soon about early access to The Guitar Registry.`);
-                document.getElementById('email-input').value = '';
-            }
-        }
-    </script>
 </body>
 </html>
